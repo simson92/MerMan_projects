@@ -149,7 +149,8 @@ gmv_order_type_pivot as (
         round(sum(gmv),2) gmv
         from gmv_monthly 
         where 
-        gmv_monthly.month <> format_date("%Y%m",date_stop) 
+        1=1
+        #and gmv_monthly.month <> format_date("%Y%m",date_stop) 
         group by 1,2
         )
         PIVOT 
